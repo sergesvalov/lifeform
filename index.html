@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moving Dots Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="game-container">
         <!-- Dots will be added here by JavaScript -->
     </div>
+
+    <div id="controls">
+        <h2>Управление</h2>
+        <div class="control-group">
+            <label for="predator-rate">Шанс хищника (1/N)</label>
+            <input type="range" id="predator-rate" min="1" max="20" value="5">
+            <span id="predator-rate-val">5</span>
+        </div>
+        <div class="control-group">
+            <label for="food-count">Количество еды</label>
+            <input type="number" id="food-count" min="0" max="50" value="10">
+        </div>
+        <div class="control-group">
+            <label>
+                <input type="checkbox" id="toggle-habitats" checked>
+                Ареалы хищников
+            </label>
+        </div>
+        <div class="control-group">
+            <label>
+                <input type="checkbox" id="toggle-hunters" checked>
+                Включить Охотника
+            </label>
+        </div>
+        <div class="control-group">
+            <label for="fight-rate">Драки хищников (каждая N-я)</label>
+            <input type="number" id="fight-rate" min="1" max="20" value="4">
+        </div>
+        <button id="restart-btn">Перезапуск</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

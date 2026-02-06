@@ -1,11 +1,13 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #1a1a1a; /* Dark sleek background */
+    background-color: #1a1a1a;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 #game-container {
@@ -19,7 +21,71 @@ body, html {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glow effect */
-    transition: transform 0.1s linear; /* Smooth movement update */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.1s linear;
     will-change: transform;
+}
+
+.food {
+    position: absolute;
+    background-color: #33FF57;
+    box-shadow: 0 0 10px rgba(51, 255, 87, 0.5);
+}
+
+#controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 250px;
+    z-index: 1000;
+}
+
+#controls h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+}
+
+.control-group input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #3357FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #2244CC;
 }
